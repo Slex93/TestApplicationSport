@@ -1,3 +1,14 @@
 <resources>
-    <string name="app_name">Football Rules</string>
+    <string name="app_name">Play Game</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!--Menu fragment-->
+    <string name="football">football</string>
+    <string name="basketball">basketball</string>
+    <string name="menu_basketball_url">https://images.pexels.com/photos/1262352/pexels-photo-1262352.jpeg</string>
+    <string name="menu_football_url">https://images.pexels.com/photos/3886244/pexels-photo-3886244.jpeg</string>
+    <string name="transition_basketball">basketball_tr</string>
+    <string name="transition_football">football_tr</string>
+
 </resources>
