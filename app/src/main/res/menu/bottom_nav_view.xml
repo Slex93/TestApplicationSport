@@ -3,21 +3,21 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
-        android:id="@+id/action_rules"
+        android:id="@+id/nav_rules"
         android:enabled="true"
         android:icon="@drawable/ic_rules"
         android:title="Rules"
         app:showAsAction="always" />
 
     <item
-        android:id="@+id/action_players"
+        android:id="@+id/nav_players"
         android:enabled="true"
         android:icon="@drawable/ic_players"
         android:title="Players"
         app:showAsAction="withText" />
 
     <item
-        android:id="@+id/action_gallery"
+        android:id="@+id/nav_gallery"
         android:enabled="true"
         android:icon="@drawable/ic_gallery"
         android:title="Gallery"

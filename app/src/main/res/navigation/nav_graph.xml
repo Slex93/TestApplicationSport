@@ -3,26 +3,45 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/menuFragment">
+    app:startDestination="@id/nav_menu">
 
     <fragment
-        android:id="@+id/menuFragment"
+        android:id="@+id/nav_menu"
         android:name="com.example.testapplicationsport.MenuFragment"
         android:label="Football Rules"
-        tools:layout="@layout/fragment_menu" >
+        tools:layout="@layout/fragment_menu">
         <action
-            android:id="@+id/action_menuFragment_to_mainFragment"
-            app:destination="@id/mainFragment" />
+            android:id="@+id/action_nav_menu_to_nav_rules"
+            app:destination="@id/nav_rules" />
     </fragment>
     <fragment
-        android:id="@+id/mainFragment"
-        android:name="com.example.testapplicationsport.MainFragment"
-        android:label="fragment_main"
-        tools:layout="@layout/fragment_main">
+        android:id="@+id/nav_gallery"
+        android:name="com.example.testapplicationsport.main_screen.GalleryFragment"
+        android:label="fragment_gallery"
+        tools:layout="@layout/fragment_gallery" />
+    <fragment
+        android:id="@+id/nav_players"
+        android:name="com.example.testapplicationsport.main_screen.PlayersFragment"
+        android:label="fragment_players"
+        tools:layout="@layout/fragment_players" />
+    <fragment
+        android:id="@+id/nav_rules"
+        android:name="com.example.testapplicationsport.main_screen.RulesFragment"
+        android:label="fragment_rules"
+        tools:layout="@layout/fragment_rules" >
 
         <argument
-            android:name="transition"
+            android:name="transition_name"
             app:argType="string"/>
-
+        <action
+            android:id="@+id/action_nav_rules_to_nav_gallery"
+            app:destination="@id/nav_gallery"
+            app:popUpTo="@id/nav_rules" />
+        <action
+            android:id="@+id/action_nav_rules_to_nav_players"
+            app:destination="@id/nav_players"
+            app:popUpTo="@id/nav_rules" />
     </fragment>
+
+
 </navigation>
