@@ -35,12 +35,10 @@
             app:argType="string"/>
         <action
             android:id="@+id/action_nav_rules_to_nav_gallery"
-            app:destination="@id/nav_gallery"
-            app:popUpTo="@id/nav_rules" />
+            app:destination="@id/nav_gallery" />
         <action
             android:id="@+id/action_nav_rules_to_nav_players"
-            app:destination="@id/nav_players"
-            app:popUpTo="@id/nav_rules" />
+            app:destination="@id/nav_players" />
     </fragment>
 
 

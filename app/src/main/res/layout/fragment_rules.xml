@@ -10,31 +10,25 @@
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/rules_card_view"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:transitionName="transition"
-        android:layout_margin="50dp"
         app:layout_constraintBottom_toTopOf="@+id/bottom_navigation_view"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-
-
         <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:forceHasOverlappingRendering="true">
+            android:layout_height="match_parent">
 
             <com.google.android.material.textview.MaterialTextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/rules_football"
                 style="@style/TextAppearance.AppCompat.Body2"
-                android:layout_gravity="center"/>
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="start"
+                android:padding="50dp"
+                android:text="@string/rules_football" />
         </androidx.core.widget.NestedScrollView>
-
-
-
 
     </com.google.android.material.card.MaterialCardView>
 
