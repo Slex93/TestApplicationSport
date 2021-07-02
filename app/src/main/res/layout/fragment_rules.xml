@@ -22,12 +22,15 @@
             android:layout_height="match_parent">
 
             <com.google.android.material.textview.MaterialTextView
-                style="@style/TextAppearance.AppCompat.Body2"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_gravity="start"
-                android:padding="50dp"
+                android:scrollbarAlwaysDrawVerticalTrack="true"
+                android:padding="20dp"
                 android:text="@string/rules_football" />
+
+
         </androidx.core.widget.NestedScrollView>
 
     </com.google.android.material.card.MaterialCardView>
