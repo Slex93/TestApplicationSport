@@ -5,6 +5,8 @@ import android.os.Bundle
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.NavigationUI
+import androidx.navigation.ui.NavigationUI.navigateUp
+import androidx.navigation.ui.setupActionBarWithNavController
 import com.example.testapplicationsport.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -16,6 +18,11 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         setSupportActionBar(binding.mainToolbar)
+        val navHostFragment =
+            (supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment)
+        val navController = navHostFragment.navController
+        val appBarConfiguration = AppBarConfiguration(setOf(R.id.nav_menu))
+        setupActionBarWithNavController(navController, appBarConfiguration)
     }
 
     override fun onSupportNavigateUp(): Boolean{
@@ -23,7 +30,7 @@ class MainActivity : AppCompatActivity() {
             (supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment)
         val navController = navHostFragment.navController
         val appBarConfiguration = AppBarConfiguration(setOf(R.id.nav_menu))
-        return NavigationUI.navigateUp(navController, appBarConfiguration)
+        return navigateUp(navController, appBarConfiguration)
     }
 
 }

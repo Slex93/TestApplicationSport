@@ -5,7 +5,25 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".main_screen.PlayersFragment">
+    tools:context=".main_screen.players.PlayersFragment">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/players_card_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:transitionName="transition"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_navigation_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/player_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:listitem="@layout/item_players"/>
+
+    </com.google.android.material.card.MaterialCardView>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation_view"
