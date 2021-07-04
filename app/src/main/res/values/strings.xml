@@ -55,4 +55,7 @@
         - На игровых же тренировках всегда присутствует тренер-судья, который следит за игровым процессом и при необходимости вносит пояснения в игровой процесс.\n
         - Если же Вы тренируетесь самостоятельно, то советуем изучить правила и ознакомить всех членов команды.\n
     </string>
+    <string name="splash_screen">Splash screen</string>
+    <string name="gallery_sport_image">gallery_sport_image</string>
+    <string name="player_image">player_image</string>
 </resources>
