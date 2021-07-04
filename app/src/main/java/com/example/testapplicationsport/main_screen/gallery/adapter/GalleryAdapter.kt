@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.testapplicationsport.databinding.ItemRecyclerGalleryBinding
 import com.example.testapplicationsport.main_screen.gallery.model.Gallery
 
-class GalleryAdapter:RecyclerView.Adapter<GalleryViewHolder>() {
+class GalleryAdapter : RecyclerView.Adapter<GalleryViewHolder>() {
 
     private val listOfImages = mutableListOf<Gallery>()
 
@@ -22,7 +22,7 @@ class GalleryAdapter:RecyclerView.Adapter<GalleryViewHolder>() {
 
     override fun getItemCount(): Int = listOfImages.size
 
-    fun addItem(image: Gallery){
+    fun addItem(image: Gallery) {
         listOfImages.add(image)
         notifyItemChanged(listOfImages.size)
     }

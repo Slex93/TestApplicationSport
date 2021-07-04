@@ -1,25 +1,16 @@
 package com.example.testapplicationsport.main_screen.players
 
 import android.os.Bundle
-import android.util.Log
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
-import androidx.appcompat.app.AppCompatActivity
-import androidx.navigation.fragment.FragmentNavigatorExtras
-import androidx.navigation.fragment.NavHostFragment
-import androidx.navigation.fragment.findNavController
-import androidx.navigation.fragment.navArgs
-import androidx.navigation.ui.setupWithNavController
+import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.testapplicationsport.MenuFragment.Companion.sport
-import com.example.testapplicationsport.R
 import com.example.testapplicationsport.databinding.FragmentPlayersBinding
 import com.example.testapplicationsport.main_screen.players.adapter.PlayerAdapter
-import com.example.testapplicationsport.main_screen.players.model.Base
+import com.example.testapplicationsport.main_screen.players.model.BasePlayers
 import com.example.testapplicationsport.utiles.setupNavigationView
 
 class PlayersFragment : Fragment() {
@@ -41,7 +32,7 @@ class PlayersFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        this.setupNavigationView(binding.bottomNavigationView)
+        this.setupNavigationView(binding.bottomNavigationView.bottomNavigationView)
         initRecyclerView()
     }
 
@@ -51,9 +42,9 @@ class PlayersFragment : Fragment() {
         layoutManager = LinearLayoutManager(requireContext())
         recyclerView.adapter = adapter
         recyclerView.layoutManager = layoutManager
-        val listOfPlayers = Base().listOfPlayers
+        val listOfPlayers = BasePlayers().listOfPlayers
         listOfPlayers.forEach {
-            if (it.sport == sport){
+            if (it.sport == sport) {
                 adapter.setPlayers(it)
             }
         }

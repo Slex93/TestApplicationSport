@@ -1,26 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MenuFragment"
-    android:padding="50dp">
+    android:padding="@dimen/big_padding"
+    tools:context=".MenuFragment">
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/main_card_basketball"
-        android:transitionName="@string/transition_basketball"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:layout_marginBottom="@dimen/primary_padding"
+        android:clickable="true"
+        android:focusable="true"
+        android:transitionName="@string/transition_basketball"
+        app:cardCornerRadius="@dimen/menu_corner"
+        app:layout_constraintBottom_toTopOf="@id/view"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/view"
-        android:layout_marginBottom="25dp"
-        app:cardCornerRadius="50dp"
-        android:clickable="true"
-        android:focusable="true">
+        app:layout_constraintTop_toTopOf="parent">
 
         <androidx.coordinatorlayout.widget.CoordinatorLayout
             android:layout_width="match_parent"
@@ -30,24 +29,23 @@
                 android:id="@+id/main_image_basketball"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:scaleType="centerCrop"/>
+                android:scaleType="centerCrop" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="@string/basketball"
-                android:textSize="60sp"/>
+                style="@style/MenuText"
+                android:text="@string/basketball"/>
 
         </androidx.coordinatorlayout.widget.CoordinatorLayout>
-
 
     </com.google.android.material.card.MaterialCardView>
 
     <View
         android:id="@+id/view"
-        android:layout_width="1dp"
-        android:layout_height="1dp"
+        android:layout_width="@dimen/view_anchor"
+        android:layout_height="@dimen/view_anchor"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -55,37 +53,36 @@
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/main_card_football"
-        android:transitionName="@string/transition_football"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/view"
-        android:layout_marginTop="25dp"
-        app:cardCornerRadius="50dp"
+        android:layout_marginTop="@dimen/primary_padding"
         android:clickable="true"
-        android:focusable="true">
+        android:focusable="true"
+        android:transitionName="@string/transition_football"
+        app:cardCornerRadius="@dimen/menu_corner"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view">
 
         <androidx.coordinatorlayout.widget.CoordinatorLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-        <com.google.android.material.imageview.ShapeableImageView
-            android:id="@+id/main_image_football"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:scaleType="centerCrop"/>
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_image_football"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="@string/football"
-            android:textSize="60sp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/MenuText"
+                android:layout_gravity="center"
+                android:text="@string/football"/>
 
         </androidx.coordinatorlayout.widget.CoordinatorLayout>
-
 
     </com.google.android.material.card.MaterialCardView>
 

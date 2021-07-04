@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="primary_padding">20dp</dimen>
+    <dimen name="primary_image_size">150dp</dimen>
+    <dimen name="menu_corner">50dp</dimen>
+    <dimen name="view_anchor">1dp</dimen>
+    <dimen name="big_padding">50dp</dimen>
+    <dimen name="menu_text">60sp</dimen>
+</resources>

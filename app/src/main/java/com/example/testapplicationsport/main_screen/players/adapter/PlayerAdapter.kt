@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.testapplicationsport.databinding.ItemPlayersBinding
 import com.example.testapplicationsport.main_screen.players.model.Player
 
-class PlayerAdapter: RecyclerView.Adapter<PlayerViewHolder>() {
+class PlayerAdapter : RecyclerView.Adapter<PlayerViewHolder>() {
 
     private var listOfPlayers = mutableListOf<Player>()
 
@@ -16,13 +16,13 @@ class PlayerAdapter: RecyclerView.Adapter<PlayerViewHolder>() {
         return PlayerViewHolder(binding)
     }
 
-    override fun onBindViewHolder(holder: PlayerViewHolder, position: Int){
+    override fun onBindViewHolder(holder: PlayerViewHolder, position: Int) {
         holder.bind(listOfPlayers[position])
     }
 
     override fun getItemCount(): Int = listOfPlayers.size
 
-    fun setPlayers(player: Player){
+    fun setPlayers(player: Player) {
         listOfPlayers.add(player)
         notifyItemChanged(listOfPlayers.size)
     }

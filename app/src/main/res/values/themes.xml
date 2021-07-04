@@ -27,7 +27,8 @@
         <item name="android:background">@color/white</item>
     </style>
 
-    <style name="MenuButton" parent="Widget.MaterialComponents.Button.OutlinedButton">
+    <style name="BottomNavigation" parent="@style/Widget.Design.BottomNavigationView">
+        <item name="android:background">@color/white</item>
     </style>
-    
+
 </resources>
